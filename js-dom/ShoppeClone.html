@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Sản Phẩm và Giỏ Hàng</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+
+      .product {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px;
+      }
+
+      .product img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .cart {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+
+      .cart-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .cart-item img {
+        max-width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .checkout-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <h2>Sản phẩm 1</h2>
+      <img src="product1.jpg" alt="Sản phẩm 1" />
+      <p>Mô tả sản phẩm 1...</p>
+      <button onclick="addToCart('Sản phẩm 1')">Thêm vào giỏ hàng</button>
+    </div>
+
+    <div class="product">
+      <h2>Sản phẩm 2</h2>
+      <img src="product2.jpg" alt="Sản phẩm 2" />
+      <p>Mô tả sản phẩm 2...</p>
+      <button onclick="addToCart('Sản phẩm 2')">Thêm vào giỏ hàng</button>
+    </div>
+
+    <div class="cart">
+      <h2>Giỏ Hàng</h2>
+      <div class="cart-item" id="cart-item-1">
+        <img src="product1.jpg" alt="Sản phẩm 1" />
+        <p>Sản phẩm 1</p>
+        <button onclick="removeFromCart('cart-item-1')">Xóa</button>
+      </div>
+      <div class="cart-item" id="cart-item-2">
+        <img src="product2.jpg" alt="Sản phẩm 2" />
+        <p>Sản phẩm 2</p>
+        <button onclick="removeFromCart('cart-item-2')">Xóa</button>
+      </div>
+      <button class="checkout-button">Thanh Toán</button>
+    </div>
+
+    <script>
+      const cartItems = {};
+
+      function addToCart(productName) {
+        if (!cartItems[productName]) {
+          cartItems[productName] = 0;
+        }
+        cartItems[productName]++;
+        updateCart();
+      }
+
+      function removeFromCart(cartItemId) {
+        const productName = document
+          .getElementById(cartItemId)
+          .querySelector("p").textContent;
+        cartItems[productName]--;
+        if (cartItems[productName] <= 0) {
+          delete cartItems[productName];
+        }
+        updateCart();
+      }
+
+      function updateCart() {
+        const cart = document.querySelector(".cart");
+        cart.innerHTML = "<h2>Giỏ Hàng</h2>";
+        let totalPrice = 0;
+
+        for (const productName in cartItems) {
+          const quantity = cartItems[productName];
+          const cartItemId = productName.replace(/\s+/g, "-").toLowerCase();
+
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          cartItem.id = cartItemId;
+
+          const productImage = document.createElement("img");
+          productImage.src = `product${quantity}.jpg`;
+          productImage.alt = productName;
+
+          const productTitle = document.createElement("p");
+          productTitle.textContent = productName;
+
+          const removeButton = document.createElement("button");
+          removeButton.textContent = "Xóa";
+          removeButton.onclick = () => removeFromCart(cartItemId);
+
+          cartItem.appendChild(productImage);
+          cartItem.appendChild(productTitle);
+          cartItem.appendChild(removeButton);
+
+          cart.appendChild(cartItem);
+
+          totalPrice += quantity;
+        }
+
+        const checkoutButton = document.createElement("button");
+        checkoutButton.classList.add("checkout-button");
+        checkoutButton.textContent = "Thanh Toán";
+        cart.appendChild(checkoutButton);
+      }
+    </script>
+  </body>
+</html>
