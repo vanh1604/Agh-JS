@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#btn-change-color {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}

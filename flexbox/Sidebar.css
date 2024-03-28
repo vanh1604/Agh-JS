@@ -26,7 +26,6 @@ body {
 
 /*Sidebar Navigation*/
 .sidebar__nav {
-  flex-grow: 1;
   list-style: none;
   padding: 0;
 }

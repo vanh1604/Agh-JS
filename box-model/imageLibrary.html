@@ -14,7 +14,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px;
-        padding: 20px;
+        padding: 20px; 
       }
 
       .image {
@@ -27,18 +27,25 @@
       .image img {
         max-width: 100%;
         height: auto;
+        object-fit: cover;
       }
     </style>
   </head>
   <body>
     <div class="image-gallery">
       <div class="image">
-        <img src="image1.jpg" alt="Hình ảnh 1" />
+        <img
+          src="https://images.unsplash.com/photo-1682687982093-4773cb0dbc2e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Hình ảnh 1"
+        />
         <p>Mô tả hình ảnh 1</p>
       </div>
 
       <div class="image">
-        <img src="image2.jpg" alt="Hình ảnh 2" />
+        <img
+          src="https://images.unsplash.com/photo-1698756320528-d1d860c6686a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Hình ảnh 2"
+        />
         <p>Mô tả hình ảnh 2</p>
       </div>
 

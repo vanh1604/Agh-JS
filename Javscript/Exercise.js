@@ -2,7 +2,7 @@
 var age = 25;
 
 // In giá trị của biến age ra màn hình
-console.log("Tuổi của bạn là: " + age);
+console.log(`Tuổi của bạn là ${age}`);
 
 // Khai báo biến name và gán giá trị kiểu string
 var name = "John";
@@ -21,8 +21,8 @@ var num2 = 5;
 // Thực hiện các phép tính và in kết quả ra màn hình
 console.log("Tổng: " + (num1 + num2));
 console.log("Hiệu: " + (num1 - num2));
-console.log("Tích: " + (num1 * num2));
-console.log("Thương: " + (num1 / num2));
+console.log("Tích: " + num1 * num2);
+console.log("Thương: " + num1 / num2);
 
 // Khai báo biến firstName và gán giá trị kiểu string
 var firstName = "John";
@@ -35,4 +35,3 @@ var fullName = firstName + " " + lastName;
 
 // In giá trị của fullName ra màn hình
 console.log("Tên đầy đủ của bạn là: " + fullName);
-
