@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.schedule {
+  margin: 20px auto;
+  width: 80%;
+  padding: 10px;
+  background-color: #333;
+  border: 5px solid yellow;
+  color: white;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #333;
+  color: white;
+}
+
+.monday {
+  background-color: #ffc107; /* Màu vàng cho Thứ hai */
+}
+
+.tuesday {
+  background-color: #4caf50; /* Màu xanh cho Thứ ba */
+}
+
+.wednesday {
+  background-color: #2196f3; /* Màu xanh dương cho Thứ tư */
+}
+
+.thursday {
+  background-color: #f44336; /* Màu đỏ cho Thứ năm */
+}
+
+.friday {
+  background-color: #ff5722; /* Màu cam cho Thứ sáu */
+}
