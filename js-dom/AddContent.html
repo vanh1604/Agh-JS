@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm phần tử vào danh sách</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Phần tử 1</li>
+        <li>Phần tử 2</li>
+    </ul>
+    <button onclick="addItem()">Thêm phần tử</button>
+
+    <script>
+        function addItem() {
+            var ul = document.getElementById("myList");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode("Phần tử mới"));
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>

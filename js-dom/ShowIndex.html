@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hiển thị và ẩn phần tử</title>
+  </head>
+  <body>
+    <p id="text">Đây là đoạn văn cần hiển thị hoặc ẩn.</p>
+    <button onclick="hideText()">Ẩn đoạn văn</button>
+    <button onclick="showText()">Hiển thị đoạn văn</button>
+
+    <script>
+      function hideText() {
+        document.getElementById("text").style.display = "none";
+      }
+
+      function showText() {
+        document.getElementById("text").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

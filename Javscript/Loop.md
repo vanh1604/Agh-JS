@@ -7,7 +7,7 @@ Bài tập 3:  Viết một chương trình JavaScript sử dụng hai vòng l�
 
 Bài tập 4:  Viết một chương trình JavaScript để tìm số lớn nhất trong một mảng số nguyên đã cho. Sử dụng vòng lặp for để duyệt qua mảng.
 
- 
+   
 
 Bài tập 6: Viết một chương trình JavaScript để kiểm tra xem một số nguyên dương n có phải là số nguyên tố hay không. Sử dụng vòng lặp for để kiểm tra.
 

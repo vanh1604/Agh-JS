@@ -17,3 +17,9 @@ Tính phần trăm: Viết một hàm có tên là tinhPhanTram nhận một s�
 Tìm ước chung lớn nhất (UCLN): Viết một hàm timUCLN nhận hai số nguyên dương và trả về ước chung lớn nhất của chúng.
 
 Tìm bội chung nhỏ nhất (BCNN): Viết một hàm timBCNN nhận hai số nguyên dương và trả về bội chung nhỏ nhất của chúng.
+
+Kiểm tra một số có phải là số hoàn hảo không:
+Mô tả: Viết một hàm nhận một số nguyên làm đối số và trả về true nếu số đó là số hoàn hảo (tổng các ước của nó bằng chính nó), và false nếu không.
+
+Tìm số Fibonacci lớn nhất nhỏ hơn hoặc bằng một số cho trước:
+Mô tả: Viết một hàm nhận một số nguyên làm đối số và trả về số Fibonacci lớn nhất nhỏ hơn hoặc bằng số đó.

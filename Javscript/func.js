@@ -13,17 +13,26 @@ function tinhTongSoChan(n) {
 }
 
 //bai3
-function kiemTraSNT(n) {
-  if (n <= 1) return false;
-  if (n <= 3) return true;
-  if (n % 2 === 0 || n % 3 === 0) return false;
-  let i = 5;
-  while (i * i <= n) {
-    if (n % i === 0 || n % (i + 2) === 0) return false;
-    i += 6;
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
   }
   return true;
 }
+
+// Sử dụng hàm kiểm tra số nguyên tố
+const num = 13;
+if (isPrime(num)) {
+  console.log(num + " là số nguyên tố");
+} else {
+  console.log(num + " không phải là số nguyên tố");
+}
+
 //bai4
 function kiemTraChanLe(number) {
   if (number % 2 === 0) {
@@ -70,3 +79,40 @@ function timUCLN(a, b) {
 function timBCNN(a, b) {
   return (a * b) / timUCLN(a, b);
 }
+//bai 11
+function isPerfectNumber(num) {
+  if (num <= 0) {
+    return false; // Số không phải là số hoàn hảo nếu nhỏ hơn hoặc bằng 0
+  }
+  let total = 0;
+  for (let i = 1; i < num; i++) {
+    if (num % i === 0) {
+      total += i;
+    }
+  }
+  return total === num;
+}
+
+// Kiểm tra hàm với một số nguyên
+let num = 28;
+console.log(isPerfectNumber(num)); // Kết quả: true
+
+//bai 12
+function findLargestFibonacciNumber(num) {
+  let prev = 0;
+  let curr = 1;
+  let result = 0;
+  while (curr <= num) {
+    let next = prev + curr;
+    if (next <= num) {
+      result = next;
+    }
+    prev = curr;
+    curr = next;
+  }
+  return result;
+}
+
+// Kiểm tra hàm với một số nguyên
+let num = 20;
+console.log(findLargestFibonacciNumber(num)); // Kết quả: 13

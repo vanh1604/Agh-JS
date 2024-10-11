@@ -1,16 +1,23 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+.container {
+  max-width: 500px;
+  width: 80%;
+  margin: 0 auto;
 }
-.box-item{
-  width: 100px;
-  height: 100px;
+.left {
+  display: inline-block;
+  text-align: left;
+  width: 70%;
+  background-color: blue;
+}
+.right {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
   background-color: aqua;
 }
